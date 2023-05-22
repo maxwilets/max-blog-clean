@@ -36,7 +36,7 @@ export default function SingleOrderPage({ query }) {
   if (error) return <ErrorMessage error={error} />;
   const { order } = data;
   return (
-    <OrderStyles>
+    <>
       <Head>
         <title>Sick Fits - {order.id}</title>
       </Head>
@@ -70,6 +70,6 @@ export default function SingleOrderPage({ query }) {
           </div>
         ))}
       </div>
-    </OrderStyles>
+    </>
   );
 }
