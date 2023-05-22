@@ -22,7 +22,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@apollo/client": "3.4.0",
+    "@apollo/client": "^3.4.0",
     "@apollo/link-error": "^2.0.0-beta.3",
     "@apollo/react-ssr": "^4.0.0",
     "@keystone-6/document-renderer": "^1.1.2",
@@ -43,8 +43,9 @@
     "next-with-apollo": "^5.1.1",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "16.8.0",
     "react-transition-group": "^4.4.1",
     "styled-components": "^5.2.1",
     "waait": "^1.0.5"
