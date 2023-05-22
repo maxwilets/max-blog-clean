@@ -61,7 +61,7 @@ export default function Resume() {
         <RightSection>
           <Skills />
           <Eductation />
-          {/* <Coursework /> */}
+          <Coursework />
         </RightSection>
       </ResumeStyles>
     </>
