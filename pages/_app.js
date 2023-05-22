@@ -26,8 +26,10 @@ MyApp.getInitialProps = async function ({ Component, ctx }) {
   let pageProps = {};
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx);
+    console.log(`these are teh app apge props ${pageProps}`);
   }
   pageProps.query = ctx.query;
+  console.log(`these are teh app apge props ${pageProps}`);
   return { pageProps };
 };
 
