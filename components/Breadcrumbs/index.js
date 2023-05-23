@@ -6,10 +6,10 @@ export default function Breadcrumbs({ url }) {
   const paths = router.pathname.split('/');
   paths.shift();
   if (url) {
+    url.split('-').join(' ');
     paths.pop();
     paths.push(url);
   }
-  console.log(paths);
 
   return (
     <BreadcrumbsStyle>
@@ -19,11 +19,15 @@ export default function Breadcrumbs({ url }) {
       {paths.map((path, i) =>
         i + 1 === paths.length ? (
           <span key={i}>
-            <a className="innactive">{path}</a>
+            <a className="innactive">
+              {path.charAt(0).toUpperCase() + path.slice(1)}
+            </a>
           </span>
         ) : (
           <span key={i}>
-            <a href={`/${path}`}>{path}</a>
+            <a href={`/${path}`}>
+              {path.charAt(0).toUpperCase() + path.slice(1)}
+            </a>
           </span>
         )
       )}
