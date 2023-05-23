@@ -22,7 +22,7 @@ export default function SingleProductPage({ query }) {
   if (loading) return <p>Loading</p>;
   return (
     <>
-      <Breadcrumbs path={query.id} />
+      <Breadcrumbs url={query.id} />
       <DocumentRenderer document={data.post[0].content.document} />
     </>
   );
