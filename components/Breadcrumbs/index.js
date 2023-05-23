@@ -6,9 +6,9 @@ export default function Breadcrumbs({ url }) {
   const paths = router.pathname.split('/');
   paths.shift();
   if (url) {
-    url.split('-').join(' ');
+    const path = url.split('-').join(' ');
     paths.pop();
-    paths.push(url);
+    paths.push(path);
   }
 
   return (
