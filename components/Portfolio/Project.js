@@ -35,7 +35,7 @@ export default function Project({ projectData }) {
               href={projectData.liveSite}
               rel="noreferrer"
             >
-              Repository
+              Live Site
               <OpenLink />
             </a>
           ) : null}

@@ -19,7 +19,5 @@ export default function SingleProductPage({ query }) {
     variables: { id: query.id },
   });
   if (loading) return <p>Loading</p>;
-  console.log(data);
   return <DocumentRenderer document={data.post[0].content.document} />;
-  return <></>;
 }

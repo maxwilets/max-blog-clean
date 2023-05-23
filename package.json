@@ -1,15 +1,14 @@
 {
-  "name": "sick-fits-frontend",
+  "name": "max-blog",
   "version": "1.0.0",
-  "description": "Sick Fits! An example React, GraphQL, Next and Apollo",
+  "description": "max blog build with nextjs",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 7777",
     "build": "next build",
     "start": "next -p 7777",
     "test": "NODE_ENV=test jest --watch",
-    "heroku-postbuild": "next build",
-    "preinstall": "npx npm-force-resolutions"
+    "heroku-postbuild": "next build"
   },
   "eslintConfig": {
     "extends": [
