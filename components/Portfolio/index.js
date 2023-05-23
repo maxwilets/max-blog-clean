@@ -35,11 +35,11 @@ export default function Portfolio() {
   if (error) return <DisplayError error={error} />;
   const { portfolios: projects } = data;
   return (
-    <>
+    <PortfolioStyles>
       <h1>Projects</h1>
       {projects.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}
-    </>
+    </PortfolioStyles>
   );
 }
