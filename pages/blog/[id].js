@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { DocumentRenderer } from '@keystone-6/document-renderer';
 import gql from 'graphql-tag';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 const SINGLE_POST_QUERY = gql`
   query SINGLE_POST_QUERY($id: String!) {
@@ -19,5 +20,10 @@ export default function SingleProductPage({ query }) {
     variables: { id: query.id },
   });
   if (loading) return <p>Loading</p>;
-  return <DocumentRenderer document={data.post[0].content.document} />;
+  return (
+    <>
+      <Breadcrumbs />
+      <DocumentRenderer document={data.post[0].content.document} />
+    </>
+  );
 }

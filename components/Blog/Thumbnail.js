@@ -1,5 +1,5 @@
 export default function Thumbnail({ post }) {
-  const slug = `/blog/post/${post.slug}`;
+  const slug = `/blog/${post.slug}`;
   return (
     <a className="card" href={slug}>
       <article>
