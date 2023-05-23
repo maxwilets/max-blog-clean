@@ -1,9 +1,9 @@
-import { DocumentRenderer } from "@keystone-6/document-renderer";
-import gql from "graphql-tag";
-import { useQuery } from "@apollo/client";
-import H3Style from "../styles/Typography";
-import { BlogStyle } from "./style";
-import Thumbnail from "./Thumbnail";
+import { DocumentRenderer } from '@keystone-6/document-renderer';
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/client';
+import H3Style from '../styles/Typography';
+import { BlogStyle } from './style';
+import Thumbnail from './Thumbnail';
 
 export const ALL_POSTS_QUERY = gql`
   query ALL_POSTS_QUERY {
