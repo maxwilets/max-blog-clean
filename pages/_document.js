@@ -34,7 +34,9 @@ export default class MyDocument extends Document {
         <Head
           description="Front End Engineering Portfolio for Max Wilets, including projects built with Next.js,  Gatsby.js, React.js, Node, Express, multiple
         APIs and various other technologies with a mobile-first design mindset."
-        />
+        >
+          <link rel="shortcut icon" href="/public/static/favicon.ico" />
+        </Head>
         <body>
           <Main />
           <NextScript />
