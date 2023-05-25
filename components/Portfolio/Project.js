@@ -41,7 +41,7 @@ export default function Project({ projectData }) {
           ) : null}
         </section>
       </section>
-      {projectData.technology ? (
+      {projectData.technology.length > 0 ? (
         <>
           <h3>Technologies Used</h3>
           <section className="btnContainer">
