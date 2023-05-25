@@ -41,21 +41,25 @@ export default function Project({ projectData }) {
           ) : null}
         </section>
       </section>
-      <h3>Technologies Used</h3>
-      <section className="btnContainer">
-        {projectData.technology.map((techButton) => (
-          <a
-            href={techButton.typeLink}
-            key={techButton.id}
-            target="_blank"
-            className="btn"
-            rel="noreferrer"
-          >
-            {techButton.name}
-            <OpenLink />
-          </a>
-        ))}
-      </section>
+      {projectData.technology ? (
+        <>
+          <h3>Technologies Used</h3>
+          <section className="btnContainer">
+            {projectData.technology.map((techButton) => (
+              <a
+                href={techButton.typeLink}
+                key={techButton.id}
+                target="_blank"
+                className="btn"
+                rel="noreferrer"
+              >
+                {techButton.name}
+                <OpenLink />
+              </a>
+            ))}
+          </section>
+        </>
+      ) : null}
     </PortfolioStyles>
   );
 }
