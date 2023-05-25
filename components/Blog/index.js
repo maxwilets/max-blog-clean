@@ -31,7 +31,7 @@ export default function Blog() {
       <h1>Blog</h1>
       <H3Style>All Posts</H3Style>
       <section className="cardContainer">
-        {posts.map((post) => (
+        {posts.reverse().map((post) => (
           <Thumbnail post={post} />
         ))}
       </section>
