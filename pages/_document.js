@@ -31,13 +31,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en-CA">
-        <Head description="Front End Engineering Portfolio for Max Wilets, including projects built with Next.js,  Gatsby.js, React.js, Node, Express, multiple APIs and various other technologies with a mobile-first design mindset.">
-          <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="/public/favicon.ico"
-          />
-        </Head>
+        <Head description="Front End Engineering Portfolio for Max Wilets, including projects built with Next.js,  Gatsby.js, React.js, Node, Express, multiple APIs and various other technologies with a mobile-first design mindset." />
         <body>
           <Main />
           <NextScript />
