@@ -11,7 +11,7 @@ export default function RoateWords() {
         activeIndex === 4
           ? updateActiveIndex(0)
           : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
-      5000
+      3000
     );
     return () => clearInterval(interval);
   }, [activeIndex]);

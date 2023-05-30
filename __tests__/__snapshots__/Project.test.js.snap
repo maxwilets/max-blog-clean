@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Project/> Renders and matches the snapshot 1`] = `
+<div>
+  <div
+    class="style__PortfolioStyles-sc-1mnrp3x-0 hHsCNL"
+  >
+    <section
+      class="sideBySide"
+    >
+      <section
+        class="imageContainer"
+      >
+        <img
+          alt="mountians"
+          src="https://res.cloudinary.com/dsna4d0gs/image/upload/v1640028217/samples/landscapes/nature-mountains.jpg"
+        />
+      </section>
+      <section
+        class="contentContainer"
+      >
+        <h3>
+          test project
+        </h3>
+        <p>
+          here is a testing project testing UI
+        </p>
+        <p>
+          here is the second paragraph testing the UI for Project
+        </p>
+        <a
+          class="btn"
+          href="https://github.com/maxwilets"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Repository
+          <svg
+            fill="#fff"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"
+            />
+            <path
+              d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"
+            />
+          </svg>
+        </a>
+        <a
+          class="btn"
+          href="https://maxwilets.io"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Live Site
+          <svg
+            fill="#fff"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"
+            />
+            <path
+              d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"
+            />
+          </svg>
+        </a>
+      </section>
+    </section>
+    <h3>
+      Technologies Used
+    </h3>
+    <section
+      class="btnContainer"
+    >
+      <a
+        class="btn"
+        href="https://javascript.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        javascript
+        <svg
+          fill="#fff"
+          height="24px"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"
+          />
+          <path
+            d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"
+          />
+        </svg>
+      </a>
+      <a
+        class="btn"
+        href="https;//typescript.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        typescript
+        <svg
+          fill="#fff"
+          height="24px"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"
+          />
+          <path
+            d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"
+          />
+        </svg>
+      </a>
+    </section>
+  </div>
+</div>
+`;

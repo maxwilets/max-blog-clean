@@ -14,7 +14,7 @@ export const RotateStyles = styled.div`
   color: $dark;
   font-weight: 300;
   text-align: center;
-  margin: 0 auto;
+  margin: 5em auto;
   @media ${Devices.tablet} {
     font-size: 1.5rem;
     line-height: 1.8rem;
