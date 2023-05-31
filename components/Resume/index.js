@@ -45,11 +45,11 @@ export default function Resume() {
     });
   };
 
-  // const { data, error, loading } = useQuery(ALL_JOBS_QUERY);
+  const { data, error, loading } = useQuery(ALL_JOBS_QUERY);
 
-  // if (loading) return <p>Loading...</p>;
-  // if (error) return <DisplayError error={error} />;
-  // const { resumes } = data;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <DisplayError error={error} />;
+  const { resumes } = data;
 
   return (
     <>
@@ -69,20 +69,20 @@ export default function Resume() {
               <Briefcase />
             </span>
           </section>
-          {/* {resumes.map((resume) => (
+          {resumes.map((resume) => (
             <JobWrapper key={resume.id}>
               <YearSpacer
                 years={resume.endYear ? resume.endYear : resume.startYear}
               />
               <Job resume={resume} />
             </JobWrapper>
-          ))} */}
+          ))}
           <section className="bottomSpacer" />
         </section>
         <RightSection>
-          {/* <Skills />
+          <Skills />
           <Eductation />
-          <Coursework /> */}
+          <Coursework />
         </RightSection>
       </ResumeStyles>
     </>
