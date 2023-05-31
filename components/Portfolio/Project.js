@@ -15,10 +15,12 @@ export default function Project({ projectData }) {
     <PortfolioStyles>
       <section className="sideBySide">
         <section className="imageContainer">
-          <img
-            src={projectData.photo.image.publicUrlTransformed}
-            alt={projectData.photo.altText}
-          />
+          <a href={projectData.liveSite}>
+            <img
+              src={projectData.photo.image.publicUrlTransformed}
+              alt={projectData.photo.altText}
+            />
+          </a>
         </section>
 
         <section className="contentContainer">

@@ -24,8 +24,8 @@ export const PortfolioStyles = styled.div`
     }
     .imageContainer {
       width: 35%;
-      align-self: center;
       margin-right: 5rem;
+      margin-top: 2em;
       img {
         width: 100%;
       }

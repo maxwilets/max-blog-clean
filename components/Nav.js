@@ -7,6 +7,9 @@ export default function Nav() {
       <Link href="/resume">Resume</Link>
       <Link href="/portfolio">Portfolio</Link>
       <Link href="/blog">Blog</Link>
+      <a href="mailto:mwilets@gmail.com" className="btn">
+        Contact
+      </a>
     </NavStyles>
   );
 }

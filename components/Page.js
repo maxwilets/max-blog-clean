@@ -128,6 +128,7 @@ const GlobalStyles = createGlobalStyle`
       &:hover { 
         background-color: var(--darkBlue);
         text-decoration: none;
+        color: var(--white);
       }
     }
   }
