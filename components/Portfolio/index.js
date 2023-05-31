@@ -68,10 +68,10 @@ export default function Portfolio() {
   return (
     <PortfolioStyles>
       <h1>Projects</h1>
-      {projects.map((project, i) => (
+      {projects.map((project) => (
         <>
-          <Project key={project.title} projectData={project} />
-          <hr key={i} />
+          <Project key={project.id} projectData={project} />
+          <hr key={project.title} />
         </>
       ))}
     </PortfolioStyles>
