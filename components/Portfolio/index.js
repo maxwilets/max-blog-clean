@@ -38,7 +38,10 @@ export default function Portfolio() {
     <PortfolioStyles>
       <h1>Projects</h1>
       {projects.map((project) => (
-        <Project key={project.id} projectData={project} />
+        <>
+          <Project key={project.id} projectData={project} />
+          <hr />
+        </>
       ))}
     </PortfolioStyles>
   );

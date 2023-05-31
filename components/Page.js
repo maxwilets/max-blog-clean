@@ -128,6 +128,11 @@ const GlobalStyles = createGlobalStyle`
       &:hover { background-clor: var(--darkBlue); }
     }
   }
+
+  hr {
+    height: 1px;
+    background-color: var(--lightGray);
+  }
 `;
 
 const InnerStyles = styled.div`
