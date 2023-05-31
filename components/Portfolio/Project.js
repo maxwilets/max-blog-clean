@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { OpenLink } from '../../icons/OpenLink';
 import { PortfolioStyles } from './style';
 import { Minus } from '../../icons/Minus';
-import { Plus } from '../../icons/plus';
+import { PlusIcon } from '../../icons/PlusIcon';
 
 export default function Project({ projectData }) {
   const [toggleState, updateToggleState] = useState('plus');
@@ -54,7 +54,7 @@ export default function Project({ projectData }) {
         <>
           <h3 onClick={toggle}>
             <span className="toggleIcon">
-              {toggleState === 'plus' ? <Plus /> : <Minus />}
+              {toggleState === 'plus' ? <PlusIcon /> : <Minus />}
             </span>
             Technologies Used
           </h3>
