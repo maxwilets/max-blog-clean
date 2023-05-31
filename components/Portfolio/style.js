@@ -62,8 +62,9 @@ export const PortfolioStyles = styled.div`
   }
 
   .hide {
-    animation: 0.5s reappear;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.25s, opacity 0.25s linear;
   }
 
   .show {
