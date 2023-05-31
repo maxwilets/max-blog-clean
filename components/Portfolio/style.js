@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { Devices } from '../Devices';
-import { Plus } from '../../icons/plus';
-import { Minus } from '../../icons/Minus';
 
 export const PortfolioStyles = styled.div`
   margin-top: 5rem;
