@@ -125,7 +125,7 @@ const GlobalStyles = createGlobalStyle`
       background-color: var(--blue);
       color: var(--white);
 
-      &:hover { background-clor: var(--darkBlue); }
+      &:hover { background-color: var(--darkBlue); }
     }
   }
 
