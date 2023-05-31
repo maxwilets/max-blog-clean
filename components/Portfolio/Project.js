@@ -1,7 +1,16 @@
+import { useEffect, useState } from 'react';
 import { OpenLink } from '../../icons/OpenLink';
 import { PortfolioStyles } from './style';
+import { Minus } from '../../icons/Minus';
+import { Plus } from '../../icons/Plus';
 
 export default function Project({ projectData }) {
+  const [toggleState, updateToggleState] = useState('plus');
+  function toggle() {
+    toggleState === 'plus'
+      ? updateToggleState('minus')
+      : updateToggleState('plus');
+  }
   return (
     <PortfolioStyles>
       <section className="sideBySide">
@@ -43,8 +52,19 @@ export default function Project({ projectData }) {
       </section>
       {projectData.technology.length > 0 ? (
         <>
-          <h3>Technologies Used</h3>
-          <section className="btnContainer">
+          <h3 onClick={toggle}>
+            <span className="toggleIcon">
+              {toggleState === 'plus' ? <Plus /> : <Minus />}
+            </span>
+            Technologies Used
+          </h3>
+          <section
+            className={
+              toggleState === 'plus'
+                ? 'btn-container hide'
+                : 'btn-container show'
+            }
+          >
             {projectData.technology.map((techButton) => (
               <a
                 href={techButton.typeLink}

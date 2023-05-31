@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Devices } from '../Devices';
+import { Plus } from '../../icons/plus';
+import { Minus } from '../../icons/Minus';
 
 export const PortfolioStyles = styled.div`
   margin-top: 5rem;
@@ -45,6 +47,45 @@ export const PortfolioStyles = styled.div`
       transform: translate(5px, -2.5px);
       width: 16px;
       height: 16px;
+    }
+  }
+
+  .toggleIcon {
+    font-weight: 700;
+    margin-right: 5px;
+    svg {
+      height: 24px;
+      width: 24px;
+      font-weight: 700;
+      transform: translateY(5px);
+    }
+  }
+
+  .hide {
+    animation: 0.5s reappear;
+    display: none;
+  }
+
+  .show {
+    animation: 0.5s reappear;
+  }
+
+  @keyframes reappear {
+    0% {
+      opacity: 0;
+      transform: translateY(39px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-39px);
     }
   }
 `;
