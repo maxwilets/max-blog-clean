@@ -133,6 +133,16 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .headerButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+      height: 46px;
+      align-self: center;
+    }
+  }
+
 
   hr {
     margin-top: 2.5em;
