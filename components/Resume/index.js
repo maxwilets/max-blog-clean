@@ -30,6 +30,21 @@ export const ALL_JOBS_QUERY = gql`
 `;
 
 export default function Resume() {
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch('MaxWiletsResume.pdf').then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        const alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'MaxWiletsResume.pdf';
+        alink.click();
+      });
+    });
+  };
+
   const { data, error, loading } = useQuery(ALL_JOBS_QUERY);
 
   if (loading) return <p>Loading...</p>;
@@ -38,8 +53,10 @@ export default function Resume() {
 
   return (
     <>
-      <h1>Resume</h1>
-
+      <h1>Resume </h1>
+      <p onClick={onButtonClick} className="btn blue">
+        Download CV
+      </p>
       <ResumeStyles>
         <section className="jobSection">
           <section className="headers">
