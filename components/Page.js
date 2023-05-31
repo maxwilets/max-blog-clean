@@ -19,6 +19,8 @@ const GlobalStyles = createGlobalStyle`
     --gray: var(--grey);
     --lightGrey: #e9e9e9;
     --lightGray: var(--lightGrey);
+    --blue: #309af3;
+    --darkBlue: #082c4e;
         --white: #fff;
     --offWhite: #ededed;
     --maxWidth: 1100px;
@@ -117,6 +119,13 @@ const GlobalStyles = createGlobalStyle`
       width: 24px;
       vertical-align: middle;
       margin-right: 10px;
+    }
+
+    &.blue {
+      background-color: var(--blue);
+      color: var(--white);
+
+      &:hover { background-clor: var(--darkBlue); }
     }
   }
 `;

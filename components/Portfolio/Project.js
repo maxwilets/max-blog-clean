@@ -19,7 +19,7 @@ export default function Project({ projectData }) {
           {projectData.p3 ? <p>{projectData.p3}</p> : null}
           {projectData.repo ? (
             <a
-              className="btn"
+              className="btn blue"
               target="_blank"
               href={projectData.repo}
               rel="noreferrer"
@@ -30,7 +30,7 @@ export default function Project({ projectData }) {
           ) : null}
           {projectData.liveSite ? (
             <a
-              className="btn"
+              className="btn blue"
               target="_blank"
               href={projectData.liveSite}
               rel="noreferrer"
