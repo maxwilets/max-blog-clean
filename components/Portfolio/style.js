@@ -59,6 +59,12 @@ export const PortfolioStyles = styled.div`
     }
   }
 
+  .technlogyHeader {
+    :&hover  {
+      cursor: pointer;
+    }
+  }
+
   .hide {
     visibility: hidden;
     opacity: 0;

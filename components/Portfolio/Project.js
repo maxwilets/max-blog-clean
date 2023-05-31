@@ -15,7 +15,7 @@ export default function Project({ projectData }) {
     <PortfolioStyles>
       <section className="sideBySide">
         <section className="imageContainer">
-          <a href={projectData.liveSite}>
+          <a target="_blank" href={projectData.liveSite} rel="noreferrer">
             <img
               src={projectData.photo.image.publicUrlTransformed}
               alt={projectData.photo.altText}
@@ -54,7 +54,7 @@ export default function Project({ projectData }) {
       </section>
       {projectData.technology.length > 0 ? (
         <>
-          <h3 onClick={toggle}>
+          <h3 className="technlogyHeader" onClick={toggle}>
             <span className="toggleIcon">
               {toggleState === 'plus' ? <PlusIcon /> : <Minus />}
             </span>
