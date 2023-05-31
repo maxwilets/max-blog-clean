@@ -70,7 +70,7 @@ export default function Portfolio() {
       <h1>Projects</h1>
       {projects.map((project, i) => (
         <>
-          <Project key={project.id} projectData={project} />
+          <Project key={project.title} projectData={project} />
           <hr key={i} />
         </>
       ))}
@@ -79,7 +79,7 @@ export default function Portfolio() {
     //   <h1>Projects</h1>
     //   {project.map((projects, i) => (
     //     <>
-    //       <Project key={projects.id} projectData={projects} />
+    //       <Project key={projects.title} projectData={projects} />
     //       <hr key={i} />
     //     </>
     //   ))}
