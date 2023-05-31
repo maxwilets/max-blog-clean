@@ -130,6 +130,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   hr {
+    margin-top: 2.5em;
     height: 1px;
     background-color: var(--lightGray);
   }
