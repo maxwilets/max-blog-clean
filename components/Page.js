@@ -143,7 +143,10 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .hidden {  transition-timing-function: ease-in;
+  transition: 0.5s; opacity: 0;}
 
+  .none { display:none; }
   hr {
     margin-top: 2.5em;
     height: 1px;
