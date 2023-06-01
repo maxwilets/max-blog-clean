@@ -130,9 +130,17 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: var(--white);
       }
+
+      &.no-hover {
+        background-color: var(--blue)
+      }
     }
   }
 
+  .hide-for-small {
+    @media ${Devices.tablet} { display: none; }
+  }
+  
   .headerButtonContainer {
     display: flex;
     flex-direction: row;

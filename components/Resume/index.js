@@ -56,7 +56,7 @@ export default function Resume() {
       <div className="headerButtonContainer">
         {' '}
         <h1>Resume </h1>
-        <a onClick={onButtonClick} className="btn blue">
+        <a onClick={onButtonClick} className="btn blue hide-for-small">
           Download CV
         </a>
       </div>
