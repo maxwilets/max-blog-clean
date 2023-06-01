@@ -143,8 +143,18 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .hidden {  transition-timing-function: ease-in;
-  transition: 0.5s; opacity: 0;}
+  .NavHidden {  
+    top: -200px; 
+    position: sticky;
+    transition: 0.5s;
+  }
+
+  .NavVisible {
+    top: 0; 
+    transition: 0.5s; 
+    position: sticky;
+    z-index: 3
+  }
 
   .none { display:none; }
   hr {

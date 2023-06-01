@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import Nav from './Nav';
 import { Devices } from './Devices';
+import { useScrollDirection } from '../hooks/useScroll';
 
 const Logo = styled.h1`
   background: var(--offWhite);
@@ -25,7 +26,6 @@ const Logo = styled.h1`
 const HeaderStyles = styled.header`
   background-color: var(--gray);
   padding-left: 2%;
-  position: fixed;
   width: 100%;
   z-index: 3;
   top: 0;
@@ -47,38 +47,22 @@ const HeaderStyles = styled.header`
     grid-template-columns: auto 1fr;
     border-bottom: 1px solid var(--black, black);
   }
-
-  .hidden {
-    visibility: hidden;
-  }
 `;
 
 export default function Header() {
-  const [show, setShow] = useState(true);
-  const controlNavbar = () => {
-    if (window.scrollY > 150) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', controlNavbar);
-    return () => {
-      window.removeEventListener('scroll', controlNavbar);
-    };
-  }, []);
   return (
-    <div className={`${!show && 'hidden'}`}>
+    <div
+      className={`${
+        useScrollDirection() === 'up' ? 'NavVisible' : 'NavHidden'
+      }`}
+    >
       <HeaderStyles>
         <div className={`bar `}>
           <Logo>
             <Link href="/">Max Wilets</Link>{' '}
           </Logo>
-          <div className={`${!show && 'none'}`}>
-            <Nav />
-          </div>
+
+          <Nav />
         </div>
       </HeaderStyles>
     </div>
