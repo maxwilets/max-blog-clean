@@ -55,7 +55,6 @@ const HeaderStyles = styled.header`
 
 export default function Header() {
   const [show, setShow] = useState(true);
-  console.log(window.scrollY);
   const controlNavbar = () => {
     if (window.scrollY > 150) {
       setShow(false);
