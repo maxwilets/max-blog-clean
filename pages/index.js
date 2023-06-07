@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import RoateWords from '../components/RoateWords';
 import Services from '../components/Services';
+import RecentPosts from '../components/RecentPosts';
 
 export default function IndexPage({ query }) {
   return (
@@ -19,6 +20,7 @@ export default function IndexPage({ query }) {
         I have to offer.
       </p>
       <Services />
+      <RecentPosts />
     </>
   );
 }
