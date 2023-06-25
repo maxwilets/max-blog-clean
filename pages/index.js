@@ -1,15 +1,88 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import styled from 'styled-components';
+import { useEffect, useState } from 'react';
 import RoateWords from '../components/RoateWords';
 import Services from '../components/Services';
 import RecentPosts from '../components/RecentPosts';
+import Header from '../components/Header';
+
+const IndexStyle = styled.div`
+  .hero {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .fadeIn {
+    animation: jump ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translateY(200px) scaleY(0.9);
+      opacity: 0;
+    }
+    5% {
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(0px) scaleY(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0px) scaleY(1);
+      opacity: 1;
+    }
+  }
+`;
 
 export default function IndexPage({ query }) {
+  const [scrollDisplay, setScrollDisplay] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollDisplay(true);
+    };
+    if (!scrollDisplay) {
+      window.addEventListener('scroll', handleScroll);
+    }
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  // const onScroll = () => {
+  //   setScrollDisplay(true);
+  //   console.log('scrolling');
+  // };
   return (
-    <>
+    <IndexStyle>
       <title>Max Wilets | Software Developer | 801-674-0992</title>
 
-      <RoateWords />
-      <p className="hello">
+      <div className="hero">
+        <RoateWords />
+      </div>
+      <p className={!scrollDisplay ? 'hidden' : 'fadeIn'}>
         Welcome to my portfolio website! I am an engineer with a passion for
         frontend and software engineering and love to learn. Throughout my
         career, I have had the opportunity to work on a diverse range of
@@ -19,8 +92,10 @@ export default function IndexPage({ query }) {
         work, I invite you to take alook around and learn more about me and what
         I have to offer.
       </p>
-      <Services />
-      <RecentPosts />
-    </>
+      <div className={!scrollDisplay ? 'hidden' : 'fadeIn'}>
+        <Services />
+      </div>
+      {/* <RecentPosts /> */}
+    </IndexStyle>
   );
 }

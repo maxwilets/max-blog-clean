@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
+import { useRouter } from 'next/dist/client/router';
+import { useEffect, useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Connect from './Connect';
@@ -170,6 +172,30 @@ const GlobalStyles = createGlobalStyle`
     height: 1px;
     background-color: var(--lightGray);
   }
+  .contentContainer {
+    animation: drop ease .75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .jumpContainer {
+    animation: jump ease .75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes jump {
+         0% {transform: translateY(200px) scaleY(0.9); opacity: 0;}
+  5% {opacity: .7;}
+  50% {transform: translateY(0px) scaleY(1); opacity: 1;}
+  100% {transform: translateY(0px) scaleY(1); opacity: 1;}
+  }
+  @keyframes drop {
+      from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+  }
 `;
 
 const InnerStyles = styled.div`
@@ -180,14 +206,49 @@ const InnerStyles = styled.div`
 `;
 
 export default function Page({ children, cool }) {
+  const {
+    asPath, // the value: "/question/how-do-you-get-the-current-url-in-nextjs/"
+    pathname, // the value: "/question/[slug]"
+  } = useRouter();
+
+  const [scrollDisplay, setScrollDisplay] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollDisplay(true);
+    };
+    if (!scrollDisplay) {
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('click', handleScroll);
+    }
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  console.log(asPath);
   return (
-    <div>
-      <GlobalStyles />
-      <Header />
-      <InnerStyles>{children}</InnerStyles>
-      <Connect />
-      <Footer />
-    </div>
+    <>
+      {asPath == '/' ? (
+        <div>
+          <GlobalStyles />
+          <div className={!scrollDisplay ? 'none' : 'contentContainer'}>
+            <Header />
+          </div>
+          <InnerStyles>{children}</InnerStyles>
+          <div className={!scrollDisplay ? 'none' : 'jumpContainer'}>
+            <Connect />
+            <Footer />
+          </div>
+        </div>
+      ) : (
+        <div>
+          <GlobalStyles />
+          <Header />
+          <InnerStyles>{children}</InnerStyles>
+          <Connect />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 

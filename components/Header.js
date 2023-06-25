@@ -49,12 +49,13 @@ const HeaderStyles = styled.header`
   }
 `;
 
-export default function Header() {
+export default function Header({ ...props }) {
   return (
     <div
       className={`${
         useScrollDirection() === 'up' ? 'NavVisible' : 'NavHidden'
       }`}
+      {...props}
     >
       <HeaderStyles>
         <div className={`bar `}>
