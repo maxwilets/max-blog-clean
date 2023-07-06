@@ -212,26 +212,23 @@ export default function Page({ children, cool }) {
   } = useRouter();
 
   const [scrollDisplay, setScrollDisplay] = useState(false);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollDisplay(true);
-  //   };
-  //   if (!scrollDisplay) {
-  //     window.addEventListener('scroll', handleScroll);
-  //     window.addEventListener('click', handleScroll);
-  //   }
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-  console.log(asPath);
-  const handleScroll = () => {
-    setScrollDisplay(true);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollDisplay(true);
+    };
+    if (!scrollDisplay) {
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('click', handleScroll);
+    }
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {asPath == '/' ? (
-        <div onScroll={handleScroll}>
+        <div>
           <GlobalStyles />
           <div className={!scrollDisplay ? 'none' : 'contentContainer'}>
             <Header />
