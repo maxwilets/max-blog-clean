@@ -65,7 +65,7 @@ export default function IndexPage({ query }) {
       setScrollDisplay(true);
     };
     if (!scrollDisplay) {
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('click', handleScroll);
     }
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -82,7 +82,7 @@ export default function IndexPage({ query }) {
       <div className="hero">
         <RoateWords />
       </div>
-      <p className="fadeIn">
+      <p className={!scrollDisplay ? 'hidden' : 'fadeIn'}>
         Welcome to my portfolio website! I am an engineer with a passion for
         frontend and software engineering and love to learn. Throughout my
         career, I have had the opportunity to work on a diverse range of
