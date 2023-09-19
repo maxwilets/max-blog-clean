@@ -13,9 +13,12 @@ export default function Breadcrumbs({ url }) {
 
   return (
     <BreadcrumbsStyle>
-      <a className="home" href="/">
-        Home
-      </a>
+      <button title="Go to home" type="button">
+        <a className="home" href="/">
+          Home
+        </a>
+      </button>
+
       {paths.map((path, i) =>
         i + 1 === paths.length ? (
           <span key={i}>
@@ -25,9 +28,15 @@ export default function Breadcrumbs({ url }) {
           </span>
         ) : (
           <span key={i}>
-            <a href={`/${path}`}>
-              {path.charAt(0).toUpperCase() + path.slice(1)}
-            </a>
+            <button
+              type="button"
+              title={`Go to ${path === '/' ? 'Home' : title}`}
+            >
+              {' '}
+              <a href={`/${path}`}>
+                {path.charAt(0).toUpperCase() + path.slice(1)}
+              </a>
+            </button>
           </span>
         )
       )}

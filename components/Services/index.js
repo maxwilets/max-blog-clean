@@ -19,13 +19,15 @@ export default function Services() {
             This is my main service. With 5+ years of experience I can help
             building or optimizing websites
           </p>
-          <a
-            href="mailto:mwilets@gmail.com?subject= Web Development Inquiry"
-            className="btn"
-          >
-            <EmailLogo />
-            Web Development
-          </a>
+          <button type="button" title="Email for web development services">
+            <a
+              href="mailto:mwilets@gmail.com?subject= Web Development Inquiry"
+              className="btn"
+            >
+              <EmailLogo />
+              Web Development
+            </a>
+          </button>
         </div>
         <div className="servicesCard card">
           <h4>Marketing Services</h4>
@@ -33,13 +35,15 @@ export default function Services() {
             I can audit and optimize SEO performance and create nad manage paid
             search campaigns
           </p>
-          <a
-            href="mailto:mwilets@gmail.com?subject= Marketing Inquiry"
-            className="btn"
-          >
-            <EmailLogo />
-            Marketing
-          </a>
+          <button title="Email for marketing services" type="button">
+            <a
+              href="mailto:mwilets@gmail.com?subject= Marketing Inquiry"
+              className="btn"
+            >
+              <EmailLogo />
+              Marketing
+            </a>
+          </button>
         </div>
         <div className="servicesCard card">
           <h4>Tutoring</h4>
@@ -47,13 +51,15 @@ export default function Services() {
             With 3 years experience teaching and tutoring for web development I
             can tutor students or anyone curious about coding
           </p>
-          <a
-            href="mailto:mwilets@gmail.com?subject= Tutoring Inquiry"
-            className="btn"
-          >
-            <EmailLogo />
-            Tutoring
-          </a>
+          <button type="button" title="Email for tutoring">
+            <a
+              href="mailto:mwilets@gmail.com?subject= Tutoring Inquiry"
+              className="btn"
+            >
+              <EmailLogo />
+              Tutoring
+            </a>
+          </button>
         </div>
       </section>
     </ServicesStyles>

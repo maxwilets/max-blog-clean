@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
 import Nav from './Nav';
 import { Devices } from './Devices';
 import { useScrollDirection } from '../hooks/useScroll';

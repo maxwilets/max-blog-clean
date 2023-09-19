@@ -70,7 +70,7 @@ export default function IndexPage({ query }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [scrollDisplay]);
   // const onScroll = () => {
   //   setScrollDisplay(true);
   //   console.log('scrolling');

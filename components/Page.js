@@ -68,6 +68,16 @@ const GlobalStyles = createGlobalStyle`
   p { font-weight: 300; }
   li { font-weight: 300;}
 
+  a { cursor: pointer; }
+
+  button { 
+    padding: 0;
+		background-color: transparent;
+		border: none;
+		color: inherit;
+		cursor: pointer;
+  }
+
   .imageConatiner {
     color: var(--gray);
     position: relative;
@@ -205,7 +215,7 @@ const InnerStyles = styled.div`
   overflow: hidden;
 `;
 
-export default function Page({ children, cool }) {
+export default function Page({ children }) {
   const {
     asPath, // the value: "/question/how-do-you-get-the-current-url-in-nextjs/"
     pathname, // the value: "/question/[slug]"
@@ -253,5 +263,5 @@ export default function Page({ children, cool }) {
 }
 
 Page.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node,
 };
