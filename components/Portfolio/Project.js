@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { OpenLink } from '../../icons/OpenLink';
 import { PortfolioStyles } from './style';
 import { Minus } from '../../icons/Minus';
@@ -85,3 +86,7 @@ export default function Project({ projectData }) {
     </PortfolioStyles>
   );
 }
+
+Project.propTypes = {
+  projectData: PropTypes.object,
+};

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function School({ school }) {
   return (
     <div className="schoolDiv">
@@ -14,3 +16,12 @@ export default function School({ school }) {
     </div>
   );
 }
+
+School.propTypes = {
+  school: PropTypes.objectOf({
+    title: PropTypes.string,
+    photo: PropTypes.node,
+    location: PropTypes.string,
+    time: PropTypes.string,
+  }),
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
 import { BreadcrumbsStyle } from './styles';
 
@@ -13,11 +14,14 @@ export default function Breadcrumbs({ url }) {
 
   return (
     <BreadcrumbsStyle>
-      <button title="Go to home" type="button">
-        <a className="home" href="/">
-          Home
-        </a>
-      </button>
+      <a
+        className="home"
+        aria-label="Naviagte to home"
+        href="/"
+        title="Navigate to home"
+      >
+        Home
+      </a>
 
       {paths.map((path, i) =>
         i + 1 === paths.length ? (
@@ -30,7 +34,7 @@ export default function Breadcrumbs({ url }) {
           <span key={i}>
             <button
               type="button"
-              title={`Go to ${path === '/' ? 'Home' : title}`}
+              title={`Go to ${path === '/' ? 'Home' : path}`}
             >
               {' '}
               <a href={`/${path}`}>
@@ -43,3 +47,7 @@ export default function Breadcrumbs({ url }) {
     </BreadcrumbsStyle>
   );
 }
+
+Breadcrumbs.propTypes = {
+  url: PropTypes.string,
+};

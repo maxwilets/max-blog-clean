@@ -1,4 +1,3 @@
-import { DocumentRenderer } from '@keystone-6/document-renderer';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import H3Style from '../styles/Typography';

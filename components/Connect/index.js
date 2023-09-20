@@ -21,6 +21,7 @@ export default function Connect() {
             href="https://www.github.com/maxwilets"
             target="_blank"
             rel="noreferrer"
+            aria-label="Go to github"
           >
             <div className="image">
               <GithubIcon />
@@ -34,6 +35,7 @@ export default function Connect() {
             href="https://www.linkedin.com/in/maxwell-wilets-7aa205139/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Go to Linkedin"
           >
             <div className="image">
               <LinkedInIcon />
@@ -42,7 +44,11 @@ export default function Connect() {
           </a>
         </button>
         <button type="button" title="Email me">
-          <a className="link" href="mailto:mwilets@gmail.com">
+          <a
+            className="link"
+            href="mailto:mwilets@gmail.com"
+            aria-label="Email me"
+          >
             <div className="image">
               <MailIcon />
             </div>

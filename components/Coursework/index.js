@@ -1,9 +1,9 @@
-import gql from "graphql-tag";
-import { useQuery } from "@apollo/client";
-import H3Style from "../styles/Typography";
-import { CourseworkStyles } from "./styles";
-import DisplayError from "../ErrorMessage";
-import Course from "./Course";
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/client';
+import H3Style from '../styles/Typography';
+import { CourseworkStyles } from './styles';
+import DisplayError from '../ErrorMessage';
+import Course from './Course';
 
 export const ALL_COURSEWORK_QUERY = gql`
   query ALL_COURSEWORK_QUERY {

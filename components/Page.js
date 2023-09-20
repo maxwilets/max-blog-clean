@@ -237,7 +237,7 @@ export default function Page({ children }) {
 
   return (
     <>
-      {asPath == '/' ? (
+      {asPath === '/' ? (
         <div>
           <GlobalStyles />
           <div className={!scrollDisplay ? 'none' : 'contentContainer'}>

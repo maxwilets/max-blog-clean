@@ -1,10 +1,8 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import RoateWords from '../components/RoateWords';
 import Services from '../components/Services';
 import RecentPosts from '../components/RecentPosts';
-import Header from '../components/Header';
 
 const IndexStyle = styled.div`
   .hero {

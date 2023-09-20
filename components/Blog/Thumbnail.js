@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Thumbnail({ post }) {
   const slug = `/blog/${post.slug}`;
   return (
@@ -16,3 +18,12 @@ export default function Thumbnail({ post }) {
     </a>
   );
 }
+
+Thumbnail.propTypes = {
+  post: PropTypes.objectOf({
+    slug: PropTypes.string,
+    title: PropTypes.string,
+    date: PropTypes.string,
+    tags: PropTypes.array,
+  }),
+};
