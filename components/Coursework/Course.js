@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { CourseSyles } from './styles';
 
 export default function Course({ course }) {
@@ -24,3 +26,13 @@ export default function Course({ course }) {
     </CourseSyles>
   );
 }
+
+Course.propTypes = {
+  course: PropTypes.objectOf({
+    photo: PropTypes.object,
+    link: PropTypes.string,
+    name: PropTypes.string,
+    author: PropTypes.string,
+    description: PropTypes.string,
+  }),
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { SkillStyles } from './styles';
 
 export default function Skill({ skill }) {
@@ -12,3 +13,10 @@ export default function Skill({ skill }) {
     </SkillStyles>
   );
 }
+
+Skill.propTypes = {
+  skill: PropTypes.objectOf({
+    level: PropTypes.string,
+    skillName: PropTypes.string,
+  }),
+};

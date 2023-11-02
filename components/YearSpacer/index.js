@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import YearSpacerStyles from './styles';
 
 export default function YearSpacer({ years }) {
@@ -7,3 +8,7 @@ export default function YearSpacer({ years }) {
     </YearSpacerStyles>
   );
 }
+
+YearSpacer.propTypes = {
+  years: PropTypes.string,
+};

@@ -8,7 +8,7 @@ import { PlusIcon } from '../../icons/PlusIcon';
 export default function Project({ projectData }) {
   const [toggleState, updateToggleState] = useState('plus');
   function toggle() {
-    toggleState === 'plus'
+    return toggleState === 'plus'
       ? updateToggleState('minus')
       : updateToggleState('plus');
   }
@@ -55,7 +55,13 @@ export default function Project({ projectData }) {
       </section>
       {projectData.technology.length > 0 ? (
         <>
-          <h3 className="technlogyHeader" onClick={toggle}>
+          <h3
+            className="technlogyHeader"
+            onClick={(event) => {
+              event.preventDefault();
+              toggle;
+            }}
+          >
             <span className="toggleIcon">
               {toggleState === 'plus' ? <PlusIcon /> : <Minus />}
             </span>

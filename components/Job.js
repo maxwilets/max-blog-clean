@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { JobStyles } from './Resume/styles';
 
 export default function Job({ resume }) {
@@ -16,3 +18,17 @@ export default function Job({ resume }) {
     </JobStyles>
   );
 }
+
+Job.propTypes = {
+  resume: PropTypes.objectOf({
+    title: PropTypes.string,
+    company: PropTypes.string,
+    endYear: PropTypes.string,
+    startYear: PropTypes.string,
+    role1: PropTypes.string,
+    role2: PropTypes.string,
+    role3: PropTypes.string,
+    role4: PropTypes.string,
+    role5: PropTypes.string,
+  }),
+};
