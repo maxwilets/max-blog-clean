@@ -55,13 +55,7 @@ export default function Project({ projectData }) {
       </section>
       {projectData.technology.length > 0 ? (
         <>
-          <h3
-            className="technlogyHeader"
-            onClick={(event) => {
-              event.preventDefault();
-              toggle;
-            }}
-          >
+          <h3 className="technlogyHeader" onClick={toggle}>
             <span className="toggleIcon">
               {toggleState === 'plus' ? <PlusIcon /> : <Minus />}
             </span>
