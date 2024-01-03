@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import { useRouter } from 'next/dist/client/router';
-import { useEffect, useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Connect from './Connect';
+import React, { useEffect, useState } from 'react';
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { Connect } from './Connect';
 import { Devices } from './Devices';
 
 const GlobalStyles = createGlobalStyle`
@@ -221,7 +221,7 @@ export default function Page({ children }: { children: any }) {
     pathname, // the value: "/question/[slug]"
   } = useRouter();
 
-  const [scrollDisplay, setScrollDisplay] = useState(false);
+  const [scrollDisplay, setScrollDisplay] = useState<boolean>(false);
   useEffect(() => {
     const handleScroll = () => {
       setScrollDisplay(true);

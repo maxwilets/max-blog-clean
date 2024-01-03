@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import Nav from './Nav';
+import React from 'react';
+import { Nav } from './Nav';
 import { Devices } from './Devices';
 import { useScrollDirection } from '../hooks/useScroll';
 
@@ -48,23 +49,19 @@ const HeaderStyles = styled.header`
   }
 `;
 
-export default function Header({ ...props }) {
-  return (
-    <div
-      className={`${
-        useScrollDirection() === 'up' ? 'NavVisible' : 'NavHidden'
-      }`}
-      {...props}
-    >
-      <HeaderStyles>
-        <div className={`bar `}>
-          <Logo>
-            <Link href="/">Max Wilets</Link>{' '}
-          </Logo>
+export const Header = ({ ...props }): React.ReactNode | any => (
+  <div
+    className={`${useScrollDirection() === 'up' ? 'NavVisible' : 'NavHidden'}`}
+    {...props}
+  >
+    <HeaderStyles>
+      <div className={`bar `}>
+        <Logo>
+          <Link href="/">Max Wilets</Link>{' '}
+        </Logo>
 
-          <Nav />
-        </div>
-      </HeaderStyles>
-    </div>
-  );
-}
+        <Nav />
+      </div>
+    </HeaderStyles>
+  </div>
+);
