@@ -15,7 +15,18 @@
       "wesbos"
     ],
     "rules": {
-      "react/jsx-props-no-spreading": 0
+      "react/jsx-props-no-spreading": 0,
+      "react/jsx-filename-extension": [
+        2,
+        {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      ]
     }
   },
   "author": "",
@@ -27,6 +38,8 @@
     "@keystone-6/document-renderer": "^1.1.2",
     "@stripe/react-stripe-js": "^1.1.2",
     "@stripe/stripe-js": "^1.11.0",
+    "@types/jest": "^29.5.11",
+    "@types/react-dom": "^17.0.11",
     "apollo-upload-client": "^14.1.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-styled-components": "^1.12.0",
@@ -47,6 +60,7 @@
     "react-is": "16.8.0",
     "react-transition-group": "^4.4.1",
     "styled-components": "^5.2.1",
+    "typescript": "^4.2.3",
     "waait": "^1.0.5"
   },
   "devDependencies": {
@@ -56,6 +70,7 @@
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
+    "@types/react": "18.0.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "casual": "^1.6.2",
@@ -71,7 +86,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
-    "react-test-renderer": "^17.0.1"
+    "react-test-renderer": "^17.0.1",
+    "typescript": "^4.2.3"
   },
   "jest": {
     "setupFilesAfterEnv": [

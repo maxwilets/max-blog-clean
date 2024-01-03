@@ -56,7 +56,7 @@ const IndexStyle = styled.div`
   }
 `;
 
-export default function IndexPage({ query }) {
+export default function IndexPage() {
   const [scrollDisplay, setScrollDisplay] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -69,16 +69,19 @@ export default function IndexPage({ query }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrollDisplay]);
-  // const onScroll = () => {
-  //   setScrollDisplay(true);
-  //   console.log('scrolling');
-  // };
   return (
     <IndexStyle>
       <title>Max Wilets | Software Developer | 801-674-0992</title>
 
       <div className="hero">
-        <RoateWords />
+        <RoateWords
+          headerWords={[
+            'a front end engineer',
+            'a software engineer',
+            ' a coding educator',
+            'a passionate learner',
+          ]}
+        />
       </div>
       <p className={!scrollDisplay ? 'hidden' : 'fadeIn'}>
         Welcome to my portfolio website! I am an engineer with a passion for

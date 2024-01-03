@@ -5,7 +5,7 @@ import { RssFeed } from '../../icons/RssFeed';
 import { ServicesStyles } from '../Services/styles';
 import { PostStyles } from './styles';
 import { BlogStyle } from '../Blog/style';
-import Thumbnail from '../Blog/Thumbnail';
+// import Thumbnail from '../Blog/Thumbnail';
 
 export const ALL_POSTS_QUERY = gql`
   query ALL_POSTS_QUERY {
@@ -39,9 +39,9 @@ export default function RecentPosts() {
       </section>
       <BlogStyle>
         <section className="cardContainer">
-          {posts
+          {/* {posts
             .reverse()
-            .map((post, i) => (i > 2 ? null : <Thumbnail post={post} />))}
+            .map((post, i) => (i > 2 ? null : <Thumbnail post={post} />))} */}
         </section>
       </BlogStyle>
     </PostStyles>

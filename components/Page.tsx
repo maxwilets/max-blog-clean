@@ -215,7 +215,7 @@ const InnerStyles = styled.div`
   overflow: hidden;
 `;
 
-export default function Page({ children }) {
+export default function Page({ children }: { children: any }) {
   const {
     asPath, // the value: "/question/how-do-you-get-the-current-url-in-nextjs/"
     pathname, // the value: "/question/[slug]"

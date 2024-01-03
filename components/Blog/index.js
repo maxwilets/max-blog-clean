@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import H3Style from '../styles/Typography';
 import { BlogStyle } from './style';
-import Thumbnail from './Thumbnail';
+// import Thumbnail from './Thumbnail';
 
 export const ALL_POSTS_QUERY = gql`
   query ALL_POSTS_QUERY {
@@ -31,7 +31,8 @@ export default function Blog() {
       <H3Style>All Posts</H3Style>
       <section className="cardContainer">
         {posts.reverse().map((post) => (
-          <Thumbnail post={post} />
+          <p>hello</p>
+          // <Thumbnail post={post} />
         ))}
       </section>
     </BlogStyle>
