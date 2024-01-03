@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RotateStyles } from './styles';
 
 export default function RoateWords({ headerWords }: { headerWords: string[] }) {
@@ -30,7 +30,7 @@ export default function RoateWords({ headerWords }: { headerWords: string[] }) {
                   ? 'active'
                   : activeIndex === nextIndex && !initialLoad
                   ? 'fading'
-                  : null
+                  : ''
               }
             >
               {word}
