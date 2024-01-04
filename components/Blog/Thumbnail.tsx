@@ -4,6 +4,8 @@ interface Tag {
   name: string;
 }
 interface IProps {
+  __typename: string;
+  id: string;
   slug: string;
   title: string;
   date: string;
