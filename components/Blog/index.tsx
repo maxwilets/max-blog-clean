@@ -42,13 +42,13 @@ export default function Blog() {
   console.log(error);
   const { posts }: { posts: IProps[] } = data;
   console.log(posts);
-
+  const postsSort = [...posts];
   return (
     <BlogStyle>
       <h1>Blog</h1>
       <H3Style>All Posts</H3Style>
       <section className="cardContainer">
-        {posts.reverse().map((post) => (
+        {postsSort.reverse().map((post) => (
           <Thumbnail post={post} />
         ))}
       </section>
