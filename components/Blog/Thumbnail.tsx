@@ -1,9 +1,9 @@
 import React from 'react';
 
-interface Tag {
+type Tag = {
   name: string;
-}
-interface IProps {
+};
+type IProps = {
   __typename: string;
   id: string;
   slug: string;
@@ -11,7 +11,7 @@ interface IProps {
   date: string;
   tags: Tag[];
   summary: string;
-}
+};
 
 export default function Thumbnail({ post }: { post: IProps }) {
   const slug = `/blog/${post.slug}`;
