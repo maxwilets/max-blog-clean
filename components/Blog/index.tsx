@@ -36,6 +36,7 @@ export const ALL_POSTS_QUERY = gql`
 export default function Blog() {
   const { data, loading, error } = useQuery(ALL_POSTS_QUERY);
   if (loading) return <p>Loading</p>;
+  if (error) return <p>{error}</p>;
   const { posts } = data;
 
   return (
