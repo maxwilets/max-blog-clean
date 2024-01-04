@@ -48,7 +48,8 @@ export default function Blog() {
       <H3Style>All Posts</H3Style>
       <section className="cardContainer">
         {posts.reverse().map(({ post }: { post: IProps }) => (
-          <Thumbnail post={post} />
+          <p>hello</p>
+          // <Thumbnail post={post} />
         ))}
       </section>
     </BlogStyle>
