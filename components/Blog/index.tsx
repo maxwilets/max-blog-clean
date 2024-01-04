@@ -38,6 +38,7 @@ export default function Blog() {
   if (loading) return <p>Loading</p>;
   if (error) return <p>{error}</p>;
   const { posts } = data;
+  console.log(posts);
 
   return (
     <BlogStyle>
