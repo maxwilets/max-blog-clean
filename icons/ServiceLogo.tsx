@@ -1,4 +1,6 @@
-export function ServiceLogo() {
+import React from 'react';
+
+export function ServiceLogo(): React.ReactElement {
   return (
     <svg
       data-v-c28df9e2=""

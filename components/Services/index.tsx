@@ -1,8 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import { EmailLogo } from '../../icons/EmailLogo';
 import { ServiceLogo } from '../../icons/ServiceLogo';
 import { ServicesStyles } from './styles';
 
-export default function Services(): JSX.Element {
+export default function Services(): any {
   return (
     <>
       <ServicesStyles>

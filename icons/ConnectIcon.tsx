@@ -1,4 +1,4 @@
-export function ConnectIcon() {
+export function ConnectIcon(): any {
   return (
     <svg
       data-v-c28df9e2=""

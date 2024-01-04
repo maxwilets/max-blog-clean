@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import { useRouter } from 'next/dist/client/router';

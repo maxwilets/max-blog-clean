@@ -26,8 +26,14 @@ export const Footer = (): any => (
       {' '}
       <p className="footer-logo">Max Wilets &copy;2024</p>
       <span>
-        Made with <Link href="https://nextjs.org/">Next.js</Link> and{' '}
-        <Link href="https://keystonejs.com/">Keystone.js</Link>
+        Made with{' '}
+        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+          Next.js
+        </a>{' '}
+        and{' '}
+        <a href="https://keystonejs.com/" target="_blank" rel="noreferrer">
+          Keystone.js
+        </a>
       </span>
     </section>
   </StyledFooter>

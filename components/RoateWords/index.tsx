@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { JSXElementConstructor, useEffect, useState } from 'react';
+// eslint-disable-next-line import/no-unresolved
 import { RotateStyles } from './styles';
 
-export default function RoateWords({ headerWords }: { headerWords: string[] }) {
+export const RoateWords = ({ headerWords }: { headerWords: string[] }): any => {
   const [activeIndex, updateActiveIndex] = useState<number>(0);
   const [initialLoad, updateInitialLoad] = useState<boolean>(true);
 
@@ -29,6 +30,7 @@ export default function RoateWords({ headerWords }: { headerWords: string[] }) {
                 className={
                   // double tertiary to check state to add active
                   // fading or no class for animation
+                  // eslint-disable-next-line no-nested-ternary
                   activeIndex === index
                     ? 'active'
                     : activeIndex === nextIndex && !initialLoad
@@ -47,4 +49,4 @@ export default function RoateWords({ headerWords }: { headerWords: string[] }) {
       </RotateStyles>
     </>
   );
-}
+};

@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import RoateWords from '../components/RoateWords';
+import { RoateWords } from '../components/RoateWords';
 import Services from '../components/Services';
 import RecentPosts from '../components/RecentPosts';
 
