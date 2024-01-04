@@ -39,6 +39,7 @@ export default function Blog() {
   const { data, loading, error } = useQuery(ALL_POSTS_QUERY);
   if (loading) return <p>Loading</p>;
   if (error) return error;
+  console.log(error);
   const { posts } = data;
   console.log(posts);
 
@@ -46,12 +47,12 @@ export default function Blog() {
     <BlogStyle>
       <h1>Blog</h1>
       <H3Style>All Posts</H3Style>
-      <section className="cardContainer">
+      {/* <section className="cardContainer">
         {posts.reverse().map(({ post }: { post: IProps }) => (
           <p>hello</p>
           // <Thumbnail post={post} />
         ))}
-      </section>
+      </section> */}
     </BlogStyle>
   );
 }
