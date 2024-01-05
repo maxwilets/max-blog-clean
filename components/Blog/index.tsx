@@ -39,10 +39,8 @@ export default function Blog() {
   const { data, loading, error } = useQuery(ALL_POSTS_QUERY);
   if (loading) return <p>Loading</p>;
   if (error) return error;
-  console.log(error);
   const { posts }: { posts: IProps[] } = data;
-  console.log(posts);
-  const postsSort = [...posts];
+  const postsSort: IProps[] = [...posts];
   return (
     <BlogStyle>
       <h1>Blog</h1>

@@ -14,7 +14,7 @@ type IProps = {
 };
 
 export default function Thumbnail({ post }: { post: IProps }) {
-  const slug = `/blog/${post.slug}`;
+  const slug: string = `/blog/${post.slug}`;
   return (
     <a className="card" href={slug}>
       <article>
@@ -31,12 +31,3 @@ export default function Thumbnail({ post }: { post: IProps }) {
     </a>
   );
 }
-
-// Thumbnail.propTypes = {
-//   post: PropTypes.objectOf({
-//     slug: PropTypes.string,
-//     title: PropTypes.string,
-//     date: PropTypes.string,
-//     tags: PropTypes.array,
-//   }),
-// };
