@@ -5,7 +5,33 @@ import { PortfolioStyles } from './style';
 import { Minus } from '../../icons/Minus';
 import { PlusIcon } from '../../icons/PlusIcon';
 
-export default function Project({ projectData }) {
+type PhotoProps = {
+  altText: string;
+  image: { publicUrlTransformed: string };
+};
+
+type TechnologyProps = {
+  id: string;
+  name: string;
+  typeLink: string;
+};
+
+type PropjectProps = {
+  id: string;
+  title: string;
+  liveSite: string;
+  p1: string;
+  p2: string;
+  p3: string;
+  repo: string;
+  photo: PhotoProps;
+  technology: TechnologyProps[];
+};
+export default function Project({
+  projectData,
+}: {
+  projectData: PropjectProps;
+}) {
   const [toggleState, updateToggleState] = useState('plus');
   function toggle() {
     return toggleState === 'plus'

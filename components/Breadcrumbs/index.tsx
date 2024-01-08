@@ -1,15 +1,23 @@
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/dist/client/router';
+// eslint-disable-next-line import/no-unresolved
 import { BreadcrumbsStyle } from './styles';
 
-export default function Breadcrumbs({ url }) {
+type UrlProps = {
+  url?: string;
+};
+
+export default function Breadcrumbs(props: UrlProps) {
+  const { url } = props;
   const router = useRouter();
   const paths = router.pathname.split('/');
   paths.shift();
   if (url) {
     const path = url.split('-').join(' ');
     paths.pop();
-    paths.push(path);
+    if (path) {
+      paths.push(path);
+    }
   }
 
   return (
