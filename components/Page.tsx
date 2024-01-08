@@ -79,6 +79,8 @@ const GlobalStyles = createGlobalStyle`
 		cursor: pointer;
   }
 
+  noDecoration: { text-decoration: none; }
+
   .imageConatiner {
     color: var(--gray);
     position: relative;

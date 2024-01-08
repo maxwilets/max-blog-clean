@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { OpenLink } from '../../icons/OpenLink';
@@ -31,7 +33,7 @@ export default function Project({
   projectData,
 }: {
   projectData: PropjectProps;
-}) {
+}): any {
   const [toggleState, updateToggleState] = useState('plus');
   function toggle() {
     return toggleState === 'plus'
@@ -81,12 +83,14 @@ export default function Project({
       </section>
       {projectData.technology.length > 0 ? (
         <>
-          <h3 className="technlogyHeader" onClick={toggle}>
-            <span className="toggleIcon">
-              {toggleState === 'plus' ? <PlusIcon /> : <Minus />}
-            </span>
-            Technologies Used
-          </h3>
+          <a className="noDecoration" onClick={toggle}>
+            <h3 className="technlogyHeader">
+              <span className="toggleIcon">
+                {toggleState === 'plus' ? <PlusIcon /> : <Minus />}
+              </span>
+              Technologies Used
+            </h3>
+          </a>
           <section
             className={
               toggleState === 'plus'

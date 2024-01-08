@@ -1,4 +1,4 @@
-export function GithubIcon() {
+export function GithubIcon(): any {
   return (
     <svg
       data-v-21b89265=""

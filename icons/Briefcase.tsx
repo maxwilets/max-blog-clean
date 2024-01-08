@@ -1,4 +1,4 @@
-export function Briefcase() {
+export function Briefcase(): any {
   return (
     <svg
       fill="#000"

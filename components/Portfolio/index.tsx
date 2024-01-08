@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import { PortfolioStyles } from './style';
@@ -83,7 +84,7 @@ type PropjectProps = {
   photo: PhotoProps;
   technology: TechnologyProps[];
 };
-export default function Portfolio() {
+export default function Portfolio(): any {
   const { data, loading, error } = useQuery(ALL_PORTFOLIO_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;

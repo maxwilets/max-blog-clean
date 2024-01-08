@@ -7,7 +7,7 @@ type UrlProps = {
   url?: string;
 };
 
-export default function Breadcrumbs(props: UrlProps) {
+export default function Breadcrumbs(props: UrlProps): any {
   const { url } = props;
   const router = useRouter();
   const paths = router.pathname.split('/');

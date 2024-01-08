@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Breadcrumbs from '../components/Breadcrumbs';
 import Resume from '../components/Resume';
 

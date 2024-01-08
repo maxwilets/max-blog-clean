@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import DisplayError from '../ErrorMessage';
@@ -29,7 +31,21 @@ export const ALL_JOBS_QUERY = gql`
   }
 `;
 
-export default function Resume() {
+type ResumeProps = {
+  id: string;
+  title: string;
+  company: string;
+  startYear: string;
+  endYear: string;
+  date: string;
+  role1: string;
+  role2: string;
+  role3?: string;
+  role4?: string;
+  role5?: string;
+};
+
+export default function Resume(): any {
   const onButtonClick = () => {
     // using Java Script method to get PDF file
     fetch('MaxWiletsResume.pdf').then((response) => {
@@ -69,7 +85,7 @@ export default function Resume() {
               <Briefcase />
             </span>
           </section>
-          {resumes.map((resume) => (
+          {resumes.map((resume: ResumeProps) => (
             <JobWrapper key={resume.id}>
               <YearSpacer
                 years={resume.endYear ? resume.endYear : resume.startYear}
