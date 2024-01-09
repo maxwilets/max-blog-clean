@@ -36,9 +36,11 @@ export default function Eductation() {
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>
-      {schools.map((school: SchoolProp) => (
-        <School key={school.id} school={school} />
-      ))}
+      {schools.map((school: SchoolProp) => {
+        console.log(school);
+        return <h1>{school.name}</h1>;
+        //  <School key={school.id} school={school} />
+      })}
     </EductationStyles>
   );
 }
