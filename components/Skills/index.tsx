@@ -1,9 +1,9 @@
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import H3Style from '../styles/Typography';
-import { SkillsSyles } from './styles';
 import DisplayError from '../ErrorMessage';
 import Skill from '../Skill';
+import { SkillProp } from '../Types';
 
 export const ALL_SKILLS_QUERY = gql`
   query ALL_SKILLS_QUERY {
@@ -19,7 +19,7 @@ export default function Skills() {
   const { data, error, loading } = useQuery(ALL_SKILLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
-  const { skills } = data;
+  const { skills }: { skills: SkillProp[] } = data;
 
   return (
     <>

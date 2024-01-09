@@ -1,9 +1,11 @@
+/* eslint-disable import/no-unresolved */
 import PropTypes from 'prop-types';
 import { SkillStyles } from './styles';
+import { SkillProp } from '../Types';
 
-export default function Skill({ skill }) {
+export default function Skill({ skill }: { skill: SkillProp }) {
   return (
-    <SkillStyles $level={skill.level}>
+    <SkillStyles level={skill.level}>
       <p>
         <b>{skill.skillName}</b>
       </p>
@@ -13,10 +15,3 @@ export default function Skill({ skill }) {
     </SkillStyles>
   );
 }
-
-Skill.propTypes = {
-  skill: PropTypes.objectOf({
-    level: PropTypes.string,
-    skillName: PropTypes.string,
-  }),
-};

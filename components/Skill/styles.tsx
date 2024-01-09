@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const SkillStyles = styled.div`
+// eslint-disable-next-line no-undef
+export const SkillStyles = styled.div<{ level: string }>`
   .colorDial {
     background: rgb(128,5,18);
     background: linear-gradient(90deg, rgba(128,5,18,1) 0%, rgba(121,9,35,1) 10%, rgba(223,113,32,1) 50%, rgba(42,26,246,1) 100%);
@@ -13,7 +14,7 @@ export const SkillStyles = styled.div`
     
     span {
       position: absolute;
-      left: ${(props) => props.$level}%;
+      left: ${(props) => props.level}%;
       color: #000;
       border-radius: 50%;
       background-color: #fff;

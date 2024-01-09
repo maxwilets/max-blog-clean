@@ -25,3 +25,9 @@ export type PostProps = {
   tags: Tag[];
   summary: string;
 };
+
+export type SkillProp = {
+  id: string;
+  level: string;
+  skillName: string;
+};
