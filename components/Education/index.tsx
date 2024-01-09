@@ -30,7 +30,9 @@ export default function Eductation() {
   const { data, loading, error } = useQuery(ALL_SCHOOLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
+
   const { educations: schools } = data;
+  console.log(schools);
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>
