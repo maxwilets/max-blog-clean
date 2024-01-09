@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { SchoolProp } from '../Types';
 
-export const School = ({ school }: { school: SchoolProp }): any => {
+export const School = ({ school }: { school: any }): any => {
   <div className="schoolDiv">
     <h4>{school.title}</h4>
     <p className="large">
