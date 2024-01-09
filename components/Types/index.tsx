@@ -42,7 +42,7 @@ export type SchoolProp = {
   id: string;
   name: string;
   title: string;
-  photo: Photo;
+  photo: Photo[];
   location: string;
   time: string;
 };
