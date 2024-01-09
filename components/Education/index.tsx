@@ -36,10 +36,8 @@ export default function Eductation(): any {
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>
-      {schools.map((school: any) => {
-        console.log(school);
+      {schools.map((school: SchoolProp) => {
         const randomKey = Math.floor(Math.random() * 100);
-        // return <h1>{school.name}</h1>;
         return <School key={randomKey} school={school} />;
       })}
     </EductationStyles>
