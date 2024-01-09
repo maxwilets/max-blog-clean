@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
 // eslint-disable-next-line no-undef
-export const SkillStyles = ({ level }: { level: string }) =>
-  styled.div`
+export const SkillStyles = ({
+  level,
+  children,
+}: {
+  level: string;
+  children: any;
+}) => {
+  const StyleDiv = styled.div`
   .colorDial {
     background: rgb(128,5,18);
     background: linear-gradient(90deg, rgba(128,5,18,1) 0%, rgba(121,9,35,1) 10%, rgba(223,113,32,1) 50%, rgba(42,26,246,1) 100%);
@@ -29,3 +35,5 @@ export const SkillStyles = ({ level }: { level: string }) =>
   }
   p { margin-bottom: 5px; margin-top: 5px; font-size: 12px; }
 `;
+  return <StyleDiv>{children}</StyleDiv>;
+};
