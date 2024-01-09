@@ -7,10 +7,10 @@ export const School = ({ school }: { school: any }): any => {
     <div className="schoolDiv">
       <h4>{school.title}</h4>
       <p className="large">
-        {/* <img
-        src={school.photo[0]?.image?.publicUrlTransformed}
-        alt={school.photo[0]?.altText}
-      /> */}
+        <img
+          src={school.photo[0]?.image?.publicUrlTransformed}
+          alt={school.photo[0]?.altText}
+        />
         {school.name}
       </p>
       <p className="large">{school.location}</p>
