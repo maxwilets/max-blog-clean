@@ -7,7 +7,7 @@ export const SkillStyles = ({
 }: {
   level: string;
   children: any;
-}) => {
+}): any => {
   const StyleDiv = styled.div`
   .colorDial {
     background: rgb(128,5,18);

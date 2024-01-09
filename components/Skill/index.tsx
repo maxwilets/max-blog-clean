@@ -2,7 +2,7 @@
 import { SkillStyles } from './styles';
 import { SkillProp } from '../Types';
 
-export const Skill = ({ skill }: { skill: SkillProp }): any => {
+export const Skill = ({ skill }: { skill: SkillProp }): any => (
   <SkillStyles level={skill.level}>
     <p>
       <b>{skill.skillName}</b>
@@ -10,5 +10,5 @@ export const Skill = ({ skill }: { skill: SkillProp }): any => {
     <span className="colorDial">
       <span>{skill.level}</span>
     </span>
-  </SkillStyles>;
-};
+  </SkillStyles>
+);

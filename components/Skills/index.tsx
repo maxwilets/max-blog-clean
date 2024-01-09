@@ -17,6 +17,33 @@ export const ALL_SKILLS_QUERY = gql`
 `;
 
 export default function Skills(): any {
+  const skillData = [
+    {
+      id: '23',
+      level: '90',
+      skillName: 'test1',
+    },
+    {
+      id: '24',
+      level: '55',
+      skillName: 'test2',
+    },
+    {
+      id: '24',
+      level: '88',
+      skillName: 'test3',
+    },
+    {
+      id: '24',
+      level: '87',
+      skillName: 'test4',
+    },
+    {
+      id: '25',
+      level: '68',
+      skillName: 'test5',
+    },
+  ];
   const { data, error, loading } = useQuery(ALL_SKILLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
