@@ -26,7 +26,7 @@ export const ALL_SCHOOLS_QUERY = gql`
   }
 `;
 
-export default function Eductation() {
+export default function Eductation(): any {
   const { data, loading, error } = useQuery(ALL_SCHOOLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
