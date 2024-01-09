@@ -73,18 +73,18 @@ export default function Resume(): any {
               <Briefcase />
             </span>
           </section>
-          {/* {resumes.map((resume: ResumeProps) => (
+          {resumes.map((resume: ResumeProps) => (
             <JobWrapper key={resume.id}>
               <YearSpacer
                 years={resume.endYear ? resume.endYear : resume.startYear}
               />
               <Job resume={resume} />
             </JobWrapper>
-          ))} */}
+          ))}
           <section className="bottomSpacer" />
         </section>
         <RightSection>
-          <Skills />
+          {/* <Skills /> */}
           {/* <Eductation /> */}
           <Coursework />
         </RightSection>
