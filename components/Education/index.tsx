@@ -38,8 +38,8 @@ export default function Eductation(): any {
       <H3Style>Education</H3Style>
       {schools.map((school: SchoolProp) => {
         console.log(school);
-        // return <h1>{school.name}</h1>;
-        return <School key={school.id} school={school} />;
+        return <h1>{school.name}</h1>;
+        // return <School key={school.id} school={school} />;
       })}
     </EductationStyles>
   );
