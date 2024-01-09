@@ -31,16 +31,14 @@ export default function Eductation() {
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
   console.log(data);
-  // const { educations: schools } = data;
+  const { educations: schools } = data;
   // console.log(schools);
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>
-      <p>Meow</p>
-      {/* {schools.map((school: any) => (
-        <h1>{school.name}</h1>
-        // <School key={school.id} school={school} />
-      ))} */}
+      {schools.map((school: SchoolProp) => (
+        <School key={school.id} school={school} />
+      ))}
     </EductationStyles>
   );
 }
