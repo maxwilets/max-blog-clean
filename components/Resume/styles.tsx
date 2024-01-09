@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Devices } from "../Devices";
+import styled from 'styled-components';
+import { Devices } from '../Devices';
 
 const ResumeStyles = styled.div`
   display: flex;
@@ -60,7 +60,7 @@ const ResumeStyles = styled.div`
     }
 
     &:after {
-      content: " ";
+      content: ' ';
       height: 100%;
       top: 102.5%;
       left: 46%;

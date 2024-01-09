@@ -1,20 +1,7 @@
-import PropTypes from 'prop-types';
-
+/* eslint-disable import/no-unresolved */
 import { JobStyles } from './Resume/styles';
 
-type ResumeProps = {
-  id: string;
-  title: string;
-  company: string;
-  startYear: string;
-  endYear: string;
-  date: string;
-  role1: string;
-  role2: string;
-  role3?: string;
-  role4?: string;
-  role5?: string;
-};
+import { ResumeProps } from './Types';
 
 // $year={resume.endYear ? resume.endYear : resume.startYear}
 

@@ -1,5 +1,4 @@
 /* eslint-disable import/no-unresolved */
-import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import { useRouter } from 'next/dist/client/router';
 import React, { useEffect, useState } from 'react';
@@ -264,7 +263,3 @@ export default function Page({ children }: { children: any }) {
     </>
   );
 }
-
-Page.propTypes = {
-  children: PropTypes.node,
-};
