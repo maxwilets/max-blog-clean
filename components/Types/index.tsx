@@ -33,9 +33,10 @@ export type SkillProp = {
 };
 
 type Photo = {
+  __typename: string;
   id: string;
   altText: string;
-  image: { publicUrlTransformed: string };
+  image: { publicUrlTransformed: string; __typename: string };
 };
 
 export type SchoolProp = {
