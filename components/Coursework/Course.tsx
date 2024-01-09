@@ -1,13 +1,15 @@
+/* eslint-disable import/no-unresolved */
 import PropTypes from 'prop-types';
 
 import { CourseSyles } from './styles';
+import { CourseProps } from '../Types';
 
-export default function Course({ course }) {
+export default function Course({ course }: { course: CourseProps }): any {
   return (
     <CourseSyles>
       <section className="header">
         <img
-          alt={course.photo.alt}
+          alt={course.photo.altText}
           src={course.photo.image.publicUrlTransformed}
         />
         <h4>
@@ -26,13 +28,3 @@ export default function Course({ course }) {
     </CourseSyles>
   );
 }
-
-Course.propTypes = {
-  course: PropTypes.objectOf({
-    photo: PropTypes.object,
-    link: PropTypes.string,
-    name: PropTypes.string,
-    author: PropTypes.string,
-    description: PropTypes.string,
-  }),
-};

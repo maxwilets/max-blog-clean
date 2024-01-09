@@ -47,3 +47,13 @@ export type SchoolProp = {
   location: string;
   time: string;
 };
+
+export type CourseProps = {
+  id: string;
+  name: string;
+  course: string;
+  description: string;
+  link: string;
+  author: string;
+  photo: Photo;
+};

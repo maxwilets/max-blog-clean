@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 import DisplayError from '../ErrorMessage';
 import H3Style from '../styles/Typography';
 import { JobWrapper, ResumeStyles } from './styles';
-import Job from '../Job';
+import { Job } from '../Job';
 import YearSpacer from '../YearSpacer';
 import { Briefcase } from '../../icons/Briefcase';
 import { ResumeProps } from '../Types';

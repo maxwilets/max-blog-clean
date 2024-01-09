@@ -1,9 +1,11 @@
+/* eslint-disable import/no-unresolved */
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import H3Style from '../styles/Typography';
 import { CourseworkStyles } from './styles';
 import DisplayError from '../ErrorMessage';
 import Course from './Course';
+import { CourseProps } from '../Types';
 
 export const ALL_COURSEWORK_QUERY = gql`
   query ALL_COURSEWORK_QUERY {
@@ -35,7 +37,7 @@ export default function Coursework() {
   return (
     <CourseworkStyles>
       <H3Style>Recent Coursework</H3Style>
-      {courses.map((course) => (
+      {courses.map((course: CourseProps) => (
         <Course key={course.id} course={course} />
       ))}
     </CourseworkStyles>
