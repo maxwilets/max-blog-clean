@@ -1,8 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import H3Style from '../styles/Typography';
 import DisplayError from '../ErrorMessage';
-import Skill from '../Skill';
+import { Skill } from '../Skill';
 import { SkillProp } from '../Types';
 
 export const ALL_SKILLS_QUERY = gql`
@@ -15,7 +16,7 @@ export const ALL_SKILLS_QUERY = gql`
   }
 `;
 
-export default function Skills() {
+export default function Skills(): any {
   const { data, error, loading } = useQuery(ALL_SKILLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;

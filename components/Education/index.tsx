@@ -1,9 +1,11 @@
+/* eslint-disable import/no-unresolved */
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import H3Style from '../styles/Typography';
 import { EductationStyles } from './styles';
 import DisplayError from '../ErrorMessage';
-import School from './School';
+import { School } from './School';
+import { SchoolProp } from '../Types';
 
 export const ALL_SCHOOLS_QUERY = gql`
   query ALL_SCHOOLS_QUERY {
@@ -32,7 +34,7 @@ export default function Eductation() {
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>
-      {schools.map((school) => (
+      {schools.map((school: SchoolProp) => (
         <School key={school.id} school={school} />
       ))}
     </EductationStyles>

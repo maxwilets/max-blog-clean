@@ -31,3 +31,18 @@ export type SkillProp = {
   level: string;
   skillName: string;
 };
+
+type Photo = {
+  id: string;
+  altText: string;
+  image: { publicUrlTransformed: string };
+};
+
+export type SchoolProp = {
+  id: string;
+  name: string;
+  title: string;
+  photo: Photo;
+  location: string;
+  time: string;
+};
