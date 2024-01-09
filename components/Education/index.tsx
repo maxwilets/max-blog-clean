@@ -30,15 +30,13 @@ export default function Eductation(): any {
   const { data, loading, error } = useQuery(ALL_SCHOOLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
-  console.log(data);
   const { educations: schools } = data;
-  // console.log(schools);
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>
-      {schools.map((school: SchoolProp) => {
+      {schools.map((school: SchoolProp, index: number) => {
         const randomKey = Math.floor(Math.random() * 100);
-        return <School key={randomKey} school={school} />;
+        return <School key={`school-${index}-${randomKey}`} school={school} />;
       })}
     </EductationStyles>
   );

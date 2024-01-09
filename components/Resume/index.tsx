@@ -84,7 +84,7 @@ export default function Resume(): any {
           <section className="bottomSpacer" />
         </section>
         <RightSection>
-          {/* <Skills /> */}
+          <Skills />
           <Eductation />
           <Coursework />
         </RightSection>
