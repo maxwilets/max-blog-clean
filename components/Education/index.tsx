@@ -37,7 +37,8 @@ export default function Eductation() {
     <EductationStyles>
       <H3Style>Education</H3Style>
       {schools.map((school: any) => (
-        <School key={school.id} school={school} />
+        <h1>{school.name}</h1>
+        // <School key={school.id} school={school} />
       ))}
     </EductationStyles>
   );
