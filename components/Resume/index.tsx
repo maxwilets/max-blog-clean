@@ -85,7 +85,7 @@ export default function Resume(): any {
         </section>
         <RightSection>
           <Skills />
-          <Eductation />
+          {/* <Eductation /> */}
           <Coursework />
         </RightSection>
       </ResumeStyles>
