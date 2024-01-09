@@ -32,13 +32,14 @@ export default function Eductation() {
   if (error) return <DisplayError error={error} />;
 
   const { educations: schools } = data;
-  console.log(schools);
+
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>
-      {schools.map((school: SchoolProp) => (
-        <School key={school.id} school={school} />
-      ))}
+      {schools.map((school: SchoolProp) => {
+        console.log(school);
+        // return <School key={school.id} school={school} />;
+      })}
     </EductationStyles>
   );
 }

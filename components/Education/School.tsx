@@ -6,7 +6,7 @@ export const School = ({ school }: { school: SchoolProp }): any => {
     <h4>{school.title}</h4>
     <p className="large">
       <img
-        src={school.photo.image?.publicUrlTransformed}
+        src={school.photo?.image?.publicUrlTransformed}
         alt={school.photo.altText}
       />
       {school.name}
